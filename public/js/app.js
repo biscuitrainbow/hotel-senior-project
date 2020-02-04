@@ -53114,8 +53114,8 @@ window.Chart = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\code\hotel-dashboard\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\code\hotel-dashboard\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! /Users/biscuitrainbow/code/hotel-senior-project/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/biscuitrainbow/code/hotel-senior-project/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })

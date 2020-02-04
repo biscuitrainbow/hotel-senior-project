@@ -22,7 +22,7 @@ class CreateBookingsTable extends Migration
             $table->string('customer');
             $table->string('nationality');
             $table->string('market_segment')->nullable();
-            $table->decimal('total_price')->nullable();
+            $table->decimal('total_price')->default(0);
             $table->timestamps();
         });
     }

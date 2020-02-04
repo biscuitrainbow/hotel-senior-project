@@ -1,20 +1,31 @@
 <div>
-  <h1>
-    {{number_format($total_revenue,2)}}
-  </h1>
+  <div class="px-12">
+    <div class="w-64 flex  flex-col justify-center mx-auto my-4">
+      <h1 class="text-red-500 text-3xl font-bold text-center mb-2">
+        {{number_format($total_revenue,2)}}
+      </h1>
 
-  <div class="flex">
-    <div class="w-144 h-128">
-      <canvas id="nationality"></canvas>
+      <p class="text-center">Total Revenue</p>
     </div>
 
-    <div class="w-144 h-128">
-      <canvas id="market_segment"></canvas>
-    </div>
-  </div>
+    <div class="flex justify-center w-full h-128">
+      <div class="w-1/2 h-128 mr-12">
+        <canvas id="nationality"></canvas>
+      </div>
 
-  <div class="w-144 h-128">
-    <canvas id="room_type"></canvas>
+      <div class="w-1/2 h-128">
+        <canvas id="market_segment"></canvas>
+      </div>
+    </div>
+
+    <div class="flex justify-start w-full h-128">
+    
+      <div class="w-1/2 h-128">
+        <canvas id="room_type"></canvas>
+      </div>
+    </div>
+
+
   </div>
 
 
@@ -32,7 +43,7 @@
       data: {
         labels: @this.get('nationality').labels,
         datasets: [{
-          label: '# of Votes',
+          label: 'Nationality',
           data: @this.get('nationality').count,
           borderWidth: 1
         }]
@@ -54,7 +65,7 @@
       data: {
         labels: @this.get('market_segment').labels,
         datasets: [{
-          label: '# of Votes',
+          label: 'Market Segment',
           data: @this.get('market_segment').count,
           borderWidth: 1
         }]
@@ -76,7 +87,7 @@
       data: {
         labels: @this.get('room_type').labels,
         datasets: [{
-          label: '# of Votes',
+          label: 'Room Type',
           data: @this.get('room_type').count,
           borderWidth: 1
         }]

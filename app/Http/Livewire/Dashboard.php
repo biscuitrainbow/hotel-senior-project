@@ -17,7 +17,14 @@ class Dashboard extends Component
         $from = date(request()->from);
         $to = date(request()->to);
 
-        $bookings = Booking::whereBetween('check_in', [$from, $to])->get();
+        $bookings = collect([]);
+
+        if ($from && $to) {
+            $bookings =   Booking::whereBetween('check_in', [$from, $to])->get();
+        } else {
+            $bookings = Booking::all();
+        }
+
 
         $this->nationality = $this->to_chart($bookings, 'nationality');
         $this->market_segment = $this->to_chart($bookings, 'market_segment');
